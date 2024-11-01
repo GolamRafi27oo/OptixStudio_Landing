@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+  <style>
+    /* Optional smoother animation */
+    .slide-right {
+      transform: translateX(0);
+      transition: transform 0.5s ease-in-out;
+    }
+    .hidden-slide {
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in-out;
+    }
+  </style>
+</head>
+<body class="text-white bg-custom-blue w-full scroll-smooth focus:scroll-auto">
+    <header>
+        <nav>
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span class="self-center text-xl font-semibold whitespace-nowrap">Optix<samp class="text-blue-600">Studio.</samp></span>
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <button type="button" class="flex text-white bg-gradient-to-t from-[#BBA5F4] to-[#5540E3] hover:bg-gradient-to-t hover:text-[#5540E3] rounded-full text-base p-4 text-center">Contact us <img src="./image/Frame.png" alt=""></button>
+                <button type="button" id="toggleBtn" class="mt-2 inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                  </svg>
+              </button>
+            </div>
+            <div id="navbar" class="text-base items-center justify-between hidden w-full md:flex md:w-auto md:order-1 bg-nav-custom-blue md:rounded-full md:mt-0 p-4 px-16">
+              <ul class="flex flex-col md:p-0 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 text-gray-400">
+                <li>
+                  <a href="#" class="block text-white hover:text-white">Home</a>
+                </li>
+                <li>
+                    <a href="#about" class="block hover:text-white">About us</a>
+                </li>
+                <li>
+                    <a href="#" class="block hover:text-white">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#" class="block hover:text-white">Serivces</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    <section>
+        <div class="translate-y-28 2xl:translate-x-20 translate-x-0 2xl:text-8xl lg:text-6xl text-4xl font-light max-w-screen-xl justify-between mx-auto p-4">
+            <ul id="textElement">
+                <li>Let’s Bring <span class="italic font-normal">Your</span></li>
+                <li><span class="italic font-normal">Vision</span> Into The Digital</li>
+                <li>World</li>
+            </ul>
+        </div>
+        <div class="flex items-end justify-end overflow-auto mt-40 mb-10 no-scrollbar">
+            <img id="image"  class="hidden-slide w-[70%] h-full object-cover rounded-l-[10px]" src="./src/image/inp-cwv.png" alt="">
+        </div>
+    </section>
+
+
+     
+    <section>
+        <div id="scroll-container" class="overflow-x-auto whitespace-nowrap no-scrollbar">
+            <ul class="flex space-x-6 2xl:text-7xl lg:text-4xl text-2xl font-thin">
+                <li>
+                    <div class="flex items-center">
+                        <img class="h-20 p-4 mx-12" src="./src/image/star.png" alt="Star Icon">
+                        <h1>WEB DEVELOPMENT</h1>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <img class="h-20 p-4 mx-12" src="./src/image/star.png" alt="Star Icon">
+                        <h1>UX / UI</h1>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <img class="h-20 p-4 mx-12" src="./src/image/star.png" alt="Star Icon">
+                        <h1>APP DEVELOPMENT</h1>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <img class="h-20 p-4 mx-12" src="./src/image/star.png" alt="Star Icon">
+                        <h1>BRANDING</h1>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="lg:m-40 sm:m-20 m-10">
+        <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
+            <div class="flex justify-center ">
+                <img src="./src/image/image 2484.png" alt="">
+            </div>
+            <div class="text-2xl lg:text-left text-center font-thin flex items-center">
+                <p>
+                    We take your unique ideas and transform them 
+                    into exceptional digital experiences that captivate, 
+                    inspire, and drive meaningful results for your 
+                    business.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="scroll-smooth bg-gradient-to-t from-[#BBA5F4] to-[#5540E3] lg:mx-[40px] mx-[20px] rounded-[32px]">
+        <div class="grid 2xl:grid-cols-2 grid-cols-1 gap-4 justify-center items-center pt-[140px] lg:px-[214px] px-[50px] lg:text-[64px] text-[44px] font-thin">
+            <div class="italic">Our<br>Expertise</div>
+            <div class="text-[24px]">
+                At our digital agency, we offer a comprehensive range of 
+                services to bring your vision to life. Our approach is 
+                collaborative and tailored to meet your unique needs at every 
+                stage of the project.
+            </div>
+        </div>
+        <div class="mt-20 pb-40 lg:px-[214px] px-[50px] lg:text-[88px] md:text-[64px] sm:text-[44px] text-[24px] text-[#BAB9BF] font-light">
+            <ul>
+                <li>Brand Identity</li>
+                <li class="text-white flex"><img class="mr-4 h-[124px] lg:w-[160px] w-[160px] bg-slate-500 rounded-lg" src="./src/image/box.png" alt=""> WEB DESIGN</li>
+                <li>Web Development</li>
+                <li>App Development</li>
+            </ul>
+        </div>
+    </section>
+
+   
+    <section class="xl:m-40 sm:m-20 m-10 ">
+        <div class="grid xl:grid-cols-2 grid-cols-1 gap-4">
+            <div>
+                <ul class="text-[64px] font-thin">
+                    <li>From Idea To</li>
+                    <li class="italic">Reality</li>
+                </ul>
+                <p class="16px pt-5 pb-5 text-[#BAB9BF] sm:w-[454px] w-[350px]">Every project is unique, but our process always centers around collaboration and precision. We work closely with you to ensure your vision is brought to life, from concept to completion. Here’s how we do it:</p>          
+                <button type="button" class="flex text-white bg-gradient-to-t from-[#BBA5F4] to-[#5540E3] hover:bg-gradient-to-t hover:text-[#5540E3] rounded-full text-base p-4 text-center"> <a href="#">Contact us</a> <img src="./image/Frame.png" alt=""></button>
+
+            </div>
+            <div class="text-left ">
+                <div class="border-2 border-[#383549] p-[32px] rounded-[10px] mb-5">
+                    <ul class="font-normal flex text-[24px] ">
+                        <li class="pr-5">01.</li>
+                        <li>Discovery</li>
+                    </ul>
+                    <p class="pl-14 text-[16px] text-[#BAB9BF]">We start by getting to know your business, goals, and audience. This insight helps us tailor our approach and craft a solution that aligns with your vision.</p>
+                </div>
+                <div class="border-2 border-[#383549] p-[32px] rounded-[10px] mb-5">
+                    <ul class="font-normal flex text-[24px] ">
+                        <li class="pr-5">02.</li>
+                        <li>Design</li>
+                    </ul>
+                    <p class="pl-14 text-[16px] text-[#BAB9BF]">Our design phase is driven by creativity and user experience. We create intuitive, visually stunning designs that reflect your brand and engage your audience.</p>
+                </div>
+                <div class="border-2 border-[#383549] p-[32px] rounded-[10px] mb-5">
+                    <ul class="font-normal flex text-[24px] ">
+                        <li class="pr-5">03.</li>
+                        <li>Development</li>
+                    </ul>
+                    <p class="pl-14 text-[16px] text-[#BAB9BF]">Once the design is approved, we bring it to life with cutting-edge web and app development, ensuring functionality, performance, and scalability at every step.</p>
+                </div>
+                <div class="border-2 border-[#383549] p-[32px] rounded-[10px] mb-5">
+                    <ul class="font-normal flex text-[24px] ">
+                        <li class="pr-5">04.</li>
+                        <li>Launch & Beyond</li>
+                    </ul>
+                    <p class="pl-14 text-[16px] text-[#BAB9BF]">After thorough testing, we launch your project and continue to provide support, ensuring your digital product evolves with your needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="scroll-containerTwo" class="overflow-x-auto whitespace-nowrap no-scrollbar">
+            <ul class="flex space-x-6 2xl:text-7xl lg:text-4xl text-2xl font-thin">
+                <li>
+                    <div class="flex items-center">
+                        <img class="h-20 p-4 mx-12" src="./src/image/star.png" alt="Star Icon">
+                        <h1>WEB DEVELOPMENT</h1>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <img class="h-20 p-4 mx-12" src="./src/image/star.png" alt="Star Icon">
+                        <h1>UX / UI</h1>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <img class="h-20 p-4 mx-12" src="./src/image/star.png" alt="Star Icon">
+                        <h1>APP DEVELOPMENT</h1>
+                    </div>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <img class="h-20 p-4 mx-12" src="./src/image/star.png" alt="Star Icon">
+                        <h1>BRANDING</h1>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="mt-10 bg-[#191934] lg:mx-[40px] mx-[20px] rounded-[32px]">
+        <div class="grid 2xl:grid-cols-2 grid-cols-1 gap-4 justify-center items-center pt-[140px] lg:px-[214px] px-[50px] lg:text-[64px] text-[44px] font-thin">
+            <div class="italic">Our<br>Expertise</div>
+            <div class="text-[24px]">
+                At our digital agency, we offer a comprehensive range of 
+                services to bring your vision to life. Our approach is 
+                collaborative and tailored to meet your unique needs at every 
+                stage of the project.
+            </div>
+        </div>
+        <div class="mt-20 pb-40 lg:px-[214px] px-[50px] lg:text-[88px] md:text-[64px] sm:text-[44px] text-[24px] text-[#BAB9BF] font-light">
+            <ul>
+                <li>Brand Identity</li>
+                <li class="text-white flex"><img class="mr-4 h-[124px] lg:w-[160px] w-[160px] bg-slate-500 rounded-lg" src="./src/image/box.png" alt=""> WEB DESIGN</li>
+                <li>Web Development</li>
+                <li>App Development</li>
+            </ul>
+        </div>
+    </section>
+    <script src="./src/script.js"></script>
+</body>
+</html>
