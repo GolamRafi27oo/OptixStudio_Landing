@@ -71,3 +71,12 @@ window.addEventListener('wheel', (event) => {
     hasSlidIn = false;
   }
 });
+
+
+document.querySelectorAll('.option').forEach(label => {
+  label.addEventListener('click', (event) => {
+      event.preventDefault();  // Prevent checkbox default behavior
+      label.classList.toggle('bg-[#5540E3]');  // Toggle red background color
+      label.classList.toggle('text-white');  // Optional: toggle text color to white for readability
+  });
+});
