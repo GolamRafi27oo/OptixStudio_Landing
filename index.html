@@ -14,6 +14,26 @@
       transform: translateX(100%);
       transition: transform 0.5s ease-in-out;
     }
+    @keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.cusAnime {
+    opacity: 0;
+    /* This ensures the element is invisible until it comes into view */
+}
+
+.cusAnime.in-view {
+    animation: appear 0.5s linear forwards;
+}
+
   </style>
 </head>
 <body class="text-white bg-custom-blue w-full scroll-smooth focus:scroll-auto transition-transform duration-300">
@@ -53,7 +73,7 @@
     </header>
     <section>
         <div class="translate-y-28 2xl:translate-x-20 translate-x-0 2xl:text-8xl lg:text-6xl text-4xl font-light max-w-screen-xl justify-between mx-auto p-4">
-            <ul id="textElement">
+            <ul id="textElement" class="cusAnime">
                 <li>Let’s Bring <span class="italic font-normal">Your</span></li>
                 <li><span class="italic font-normal">Vision</span> Into The Digital</li>
                 <li>World</li>
@@ -68,7 +88,7 @@
      
     <section>
         <div id="scroll-container" class="overflow-x-auto whitespace-nowrap no-scrollbar">
-            <ul class="flex space-x-6 2xl:text-7xl lg:text-4xl text-2xl font-thin">
+            <ul class="cusAnime flex space-x-6 2xl:text-7xl lg:text-4xl text-2xl font-thin">
                 <li>
                     <div class="flex items-center">
                         <img class="h-20 p-4 mx-12" src="./src/image/star.png" alt="Star Icon">
@@ -99,10 +119,10 @@
 
     <section class="lg:m-40 sm:m-20 m-10">
         <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
-            <div class="flex justify-center ">
+            <div class="cusAnime flex justify-center">
                 <img src="./src/image/image 2484.png" alt="">
             </div>
-            <div class="text-2xl lg:text-left text-center font-thin flex items-center">
+            <div class="cusAnime text-2xl lg:text-left text-center font-thin flex items-center">
                 <p>
                     We take your unique ideas and transform them 
                     into exceptional digital experiences that captivate, 
@@ -112,17 +132,17 @@
             </div>
         </div>
     </section>
-    <section id="about" class="scroll-smooth bg-gradient-to-t from-[#BBA5F4] to-[#5540E3] lg:mx-[40px] mx-[20px] rounded-[32px]">
+    <section id="about" class=" scroll-smooth bg-gradient-to-t from-[#BBA5F4] to-[#5540E3] lg:mx-[40px] mx-[20px] rounded-[32px]">
         <div class="grid 2xl:grid-cols-2 grid-cols-1 gap-4 justify-center items-center pt-[140px] lg:px-[214px] px-[50px] lg:text-[64px] text-[44px] font-thin">
-            <div class="italic">Our<br>Expertise</div>
-            <div class="text-[24px]">
+            <div class="italic cusAnime">Our<br>Expertise</div>
+            <div class="cusAnime text-[24px]">
                 At our digital agency, we offer a comprehensive range of 
                 services to bring your vision to life. Our approach is 
                 collaborative and tailored to meet your unique needs at every 
                 stage of the project.
             </div>
         </div>
-        <div class="mt-20 pb-40 lg:px-[205px] xl:px-[214px] px-[50px] xl:text-[88px] lg:text-[68px] md:text-[64px] sm:text-[44px] text-[24px] text-[#BAB9BF] font-light">
+        <div class="cusAnime mt-20 pb-40 lg:px-[205px] xl:px-[214px] px-[50px] xl:text-[88px] lg:text-[68px] md:text-[64px] sm:text-[44px] text-[24px] text-[#BAB9BF] font-light">
             <ul>
                 <li>Brand Identity</li>
                 <li class="text-white flex"><img class="mr-4 h-[46px] sm:h-[66px] sm:w-[80px] md:h-[96px] md:w-[110px] lg:h-[110px] lg:w-[135px] xl:h-[136px] xl:w-[165px] bg-slate-500 rounded-lg" src="./src/image/box.png" alt=""> WEB DESIGN</li>
@@ -136,50 +156,50 @@
     <section class="xl:m-40 sm:m-20 m-10 ">
         <div class="grid xl:grid-cols-2 grid-cols-1 gap-4">
             <div>
-                <ul class="text-[64px] font-thin">
+                <ul class="cusAnime text-[64px] font-thin">
                     <li>From Idea To</li>
                     <li class="italic">Reality</li>
                 </ul>
-                <p class="16px pt-5 pb-5 text-[#BAB9BF] sm:w-[454px] w-[350px]">Every project is unique, but our process always centers around collaboration and precision. We work closely with you to ensure your vision is brought to life, from concept to completion. Here’s how we do it:</p>          
-                <button type="button" class="flex text-white bg-gradient-to-t from-[#BBA5F4] to-[#5540E3] hover:bg-gradient-to-t hover:text-[#5540E3] rounded-full text-[18px] font-[500] p-4 text-center"> 
+                <p class="cusAnime 16px pt-5 pb-5 text-[#BAB9BF] sm:w-[454px] w-[350px]">Every project is unique, but our process always centers around collaboration and precision. We work closely with you to ensure your vision is brought to life, from concept to completion. Here’s how we do it:</p>          
+                <button type="button" class="cusAnime flex text-white bg-gradient-to-t from-[#BBA5F4] to-[#5540E3] hover:bg-gradient-to-t hover:text-[#5540E3] rounded-full text-[18px] font-[500] p-4 text-center"> 
                     <a href="#">Services</a> <img src="./src/image/Frame.png" alt="">
                 </button>
             </div>
             <div class="text-left ">
                 <div class="border-2 border-[#383549] p-[32px] rounded-[10px] mb-5">
-                    <ul class="font-normal flex text-[24px] ">
+                    <ul class="cusAnime font-normal flex text-[24px]">
                         <li class="pr-5">01.</li>
                         <li>Discovery</li>
                     </ul>
-                    <p class="pl-14 text-[16px] text-[#BAB9BF]">We start by getting to know your business, goals, and audience. This insight helps us tailor our approach and craft a solution that aligns with your vision.</p>
+                    <p class="cusAnime pl-14 text-[16px] text-[#BAB9BF]">We start by getting to know your business, goals, and audience. This insight helps us tailor our approach and craft a solution that aligns with your vision.</p>
                 </div>
                 <div class="border-2 border-[#383549] p-[32px] rounded-[10px] mb-5">
-                    <ul class="font-normal flex text-[24px] ">
+                    <ul class="cusAnime font-normal flex text-[24px] ">
                         <li class="pr-5">02.</li>
                         <li>Design</li>
                     </ul>
-                    <p class="pl-14 text-[16px] text-[#BAB9BF]">Our design phase is driven by creativity and user experience. We create intuitive, visually stunning designs that reflect your brand and engage your audience.</p>
+                    <p class="cusAnime pl-14 text-[16px] text-[#BAB9BF]">Our design phase is driven by creativity and user experience. We create intuitive, visually stunning designs that reflect your brand and engage your audience.</p>
                 </div>
                 <div class="border-2 border-[#383549] p-[32px] rounded-[10px] mb-5">
-                    <ul class="font-normal flex text-[24px] ">
+                    <ul class="cusAnime font-normal flex text-[24px] ">
                         <li class="pr-5">03.</li>
                         <li>Development</li>
                     </ul>
-                    <p class="pl-14 text-[16px] text-[#BAB9BF]">Once the design is approved, we bring it to life with cutting-edge web and app development, ensuring functionality, performance, and scalability at every step.</p>
+                    <p class="cusAnime pl-14 text-[16px] text-[#BAB9BF]">Once the design is approved, we bring it to life with cutting-edge web and app development, ensuring functionality, performance, and scalability at every step.</p>
                 </div>
                 <div class="border-2 border-[#383549] p-[32px] rounded-[10px] mb-5">
-                    <ul class="font-normal flex text-[24px] ">
+                    <ul class="cusAnime font-normal flex text-[24px] ">
                         <li class="pr-5">04.</li>
                         <li>Launch & Beyond</li>
                     </ul>
-                    <p class="pl-14 text-[16px] text-[#BAB9BF]">After thorough testing, we launch your project and continue to provide support, ensuring your digital product evolves with your needs.</p>
+                    <p class="cusAnime pl-14 text-[16px] text-[#BAB9BF]">After thorough testing, we launch your project and continue to provide support, ensuring your digital product evolves with your needs.</p>
                 </div>
             </div>
         </div>
     </section>
     <section>
         <div id="scroll-containerTwo" class="overflow-x-auto whitespace-nowrap no-scrollbar">
-            <ul class="flex space-x-6 2xl:text-7xl lg:text-4xl text-2xl font-thin">
+            <ul class="cusAnime flex space-x-6 2xl:text-7xl lg:text-4xl text-2xl font-thin">
                 <li>
                     <div class="flex items-center">
                         <img class="h-20 p-4 mx-12" src="./src/image/star.png" alt="Star Icon">
@@ -209,7 +229,7 @@
     </section>
     <section class="mt-10 bg-[#191934] lg:mx-[40px] mx-[20px] rounded-[32px]">
         <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 justify-center items-center pt-[10px] lg:pl-[114px] pl=0 lg:p-0 p-10 lg:text-[64px] text-[44px] font-thin">
-            <div>
+            <div class="cusAnime">
                 <div class="flex font-[500] text-[#D3CCFF] lg:mt-0 mt-10">
                     <div class="flex bg-[#636AB636] px-4 py-2 text-[16px] mr-2 rounded-full">
                         <h1 class="bg-[#44B7FF] h-[10px] w-[10px] mr-2 mt-2 rounded-full"></h1>
@@ -228,7 +248,7 @@
                     </button>
                 </div>
             </div>
-            <div class=" flex lg:justify-end justify-center p-4 mr-1">
+            <div class="cusAnime flex lg:justify-end justify-center p-4 mr-1">
                 <img src="./src/image/Frame 34400.png" alt="">
             </div>
          
@@ -239,10 +259,10 @@
         <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 justify-center items-center pt-[10px] lg:px-[114px] pl=0 lg:p-0 p-10 lg:text-[64px] text-[44px] font-thin">
             <div class="pt-10 lg:block flex  justify-center items-center lg:text-start text-center">
                 <samp>
-                    <div class="xl:text-[88px] lg:text-[58px] text-[38px] block font-[400] lg:mb-56">
+                    <div class="cusAnime xl:text-[88px] lg:text-[58px] text-[38px] block font-[400] lg:mb-56">
                         <h1>Let's<br>Collaborate</h1>
                     </div>
-                    <div class="text-lg block">
+                    <div class="cusAnime text-lg block">
                         <h1>Contact us:</h1>
                         <a class="border-0 border-b-2 border-gray-300" href="mailto:info@optixstudio.co">info@optixstudio.co</a>
                     </div>
@@ -250,7 +270,7 @@
             </div>
             <div class=" flex  lg:px-2 p-4 mr-1 justify-center items-center pt-[140px] ">
                 <form action="submit">
-                    <div class="flex text-[18px] font-[500] mb-10">
+                    <div class="cusAnime flex text-[18px] font-[500] mb-10">
                         <div class="mr-5">
                             <label for="Name">Name</label>
                             <input type="text" placeholder="Your name" required class="block py-2.5 px-0 w-full text-white bg-transparent border-0 border-b-2 border-[#543fe0] appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer">
@@ -265,7 +285,7 @@
                     <div class="mb-10">
                         <h1 class="text-[18px] mb-5">I’m Interested in ..</h1>
                         <ul class="2xl:text-[18px] xl:text-[14px] text-[12px] mb-10">
-                            <ul class="flex mb-5">
+                            <ul class="cusAnime flex mb-5">
                                 <label class="option p-2 mr-2 border-[#543fe0] border-[1px] rounded-full cursor-pointer">
                                     <input type="checkbox" class="hidden">
                                     Web Development
@@ -279,7 +299,7 @@
                                     UX/UI Design
                                 </label>
                             </ul>
-                            <ul class="flex">
+                            <ul class="cusAnime flex">
                                 <label class="option p-2 mr-2 border-[#543fe0] border-[1px] rounded-full cursor-pointer">
                                     <input type="checkbox" class="hidden">
                                     Site from scratch
@@ -294,8 +314,8 @@
                                 </label>
                             </ul>
                         </ul>
-                        <h1 class="text-[18px] font-[500] mb-5">Project budget (USD)</h1>
-                        <ul class="2xl:text-[18px] xl:text-[14px] text-[12px] flex">
+                        <h1 class="cusAnime text-[18px] font-[500] mb-5">Project budget (USD)</h1>
+                        <ul class="cusAnime 2xl:text-[18px] xl:text-[14px] text-[12px] flex">
                             <label class="option p-2 mr-2 border-[#543fe0] border-[1px] rounded-full cursor-pointer">
                                 <input type="checkbox" class="hidden">
                                 ≤ 500
@@ -321,7 +341,7 @@
 
 
                     <div class="text-[16px] font-[500] mb-10">
-                        <div class="mr-5">
+                        <div class="cusAnime mr-5">
                             <label for="project">Tell us more about your project</label>
                             <input type="text" placeholder="Say something about your great idea" required class="block py-2.5 px-0 w-full  bg-transparent border-0 border-b-2 border-[#543fe0] appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer">
                         </div>
@@ -335,7 +355,7 @@
         </div>
     </section>
     <footer class="mt-10 lg:mx-32 mx-2 lg:text-[18px] sm:text-[12px] text-[8px]">
-        <ul class="flex lg:justify-between justify-center">
+        <ul class="cusAnime flex lg:justify-between justify-center">
             <li>
                 <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
                     <span class="self-center font-semibold whitespace-nowrap">Optix<samp class="text-blue-600">Studio.</samp></span>

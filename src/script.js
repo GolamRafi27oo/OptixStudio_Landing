@@ -80,3 +80,18 @@ document.querySelectorAll('.option').forEach(label => {
       label.classList.toggle('text-white');  // Optional: toggle text color to white for readability
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".cusAnime");
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+          }
+      });
+  });
+
+  elements.forEach((el) => observer.observe(el));
+});
