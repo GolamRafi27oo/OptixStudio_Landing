@@ -1,23 +1,41 @@
-const navbar = document.getElementById("navbar");
-const toggleBtn = document.getElementById("toggleBtn");
-let isVisible = true;
+const toggleBtn = document.querySelector("#toggleBtn");
+const navbar = document.querySelector("#navbar");
+let isVisible = false;
 
-toggleBtn.addEventListener("click", () => {
+toggleBtn.addEventListener("click", (event) => {
+  // Prevent the click outside handler from being triggered when the button is clicked
+  event.stopImmediatePropagation();
+
+  // Toggle visibility
   isVisible = !isVisible;
-  navbar.classList.toggle("hidden", isVisible);
-
-  if (isVisible == false) {
+  navbar.classList.toggle("hidden", !isVisible); // Toggle the "hidden" class based on the state
+  const navBg = document.querySelector("#navBg");
+  if (isVisible) {
     navbar.classList.remove("rounded-full");
     navbar.classList.add("rounded-lg");
     navbar.classList.add("mt-5");
     navBg.classList.add("customHiddenNav");
-  } else{
+  } else {
+    navbar.classList.add("rounded-full");
+    navbar.classList.remove("rounded-lg", "mt-5");
     navBg.classList.remove("customHiddenNav");
   }
-  //toggleBtn.textContent = isVisible ? 'Hide Navbar' : 'Show Navbar';
 });
 
-
+// Hide navbar when clicking outside
+document.addEventListener("click", (event) => {
+  // Check if the click was outside of the navbar and the toggle button
+  if (!navbar.contains(event.target) && !toggleBtn.contains(event.target)) {
+    // Hide the navbar and reset the styling
+    if (isVisible) {  // Only hide if the navbar is visible
+      navbar.classList.add("hidden");
+      navbar.classList.remove("rounded-lg", "mt-5");
+      navbar.classList.add("rounded-full");
+      navBg.classList.add("customHiddenNav");
+      isVisible = false;
+    }
+  }
+});
 
 // Function to handle smooth scroll when clicking on a nav link
 document.querySelectorAll('.nav-link').forEach(anchor => {
@@ -129,7 +147,7 @@ window.addEventListener("scroll", () => {
     image.classList.add("slide-right");
     navBg.classList.add("navAnimation");
     hasSlidIn = true;
-  } else if (currentScrollY == 0 || currentScrollY < lastScrollY) {
+  } else if (currentScrollY == 0) {
     // Slide out the image when scrolling up
     image.classList.remove("slide-right");
     //image.classList.add("hidden-slide");
