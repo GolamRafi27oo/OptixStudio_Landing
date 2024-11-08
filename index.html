@@ -283,9 +283,9 @@
                         <div class="cusAnime xl:text-[80px] md:text-[50px] text-[38px] block font-[400] lg:mb-56">
                             <h1>Let's<br>Collaborate</h1>
                         </div>
-                        <div class="cusAnime sm:text-lg text-xs block border-gray-500">
+                        <div class="cusAnime sm:text-lg text-xs text-gray-300 block border-gray-600 sm:mb-0 mb-10">
                             <h1>Contact us:</h1>
-                            <a class="border-0 border-b-2 "
+                            <a class="border-0 sm:border-b-2 border-b-[1px] "
                                 href="mailto:info@optixstudio.co">info@optixstudio.co</a>
                         </div>
                     </samp>
@@ -345,21 +345,21 @@
                                 </ul>
                             </ul>
                             <h1 class="cusAnime sm:text-[16px] text-[12px] font-[500] mb-5">Project budget (USD)</h1>
-                            <ul class="cusAnime 2xl:text-[18px] md:text-[12px] text-[8px] flex select-none">
+                            <ul class="cusAnime 2xl:text-[18px] md:text-[12px] text-[10px] flex select-none">
                                 <input type="radio" name="price-range" id="price-500" class="hidden">
-                                <label for="price-500" class=" p-2 mr-2 cursor-pointer">≤ 500</label>
+                                <label for="price-500" class="border-[#543fe0] border-[1px] rounded-full p-2 mr-2 cursor-pointer">≤ 500</label>
     
                                 <input type="radio" name="price-range" id="price-1k-2k" class="hidden">
-                                <label for="price-1k-2k" class=" p-2 mr-2 cursor-pointer">1k-2k</label>
+                                <label for="price-1k-2k" class="border-[#543fe0] border-[1px] rounded-full p-2 mr-2 cursor-pointer">1k-2k</label>
     
                                 <input type="radio" name="price-range" id="price-5k-8k" class="hidden">
-                                <label for="price-5k-8k" class=" p-2 mr-2 cursor-pointer">5k-8k</label>
+                                <label for="price-5k-8k" class="border-[#543fe0] border-[1px] rounded-full p-2 mr-2 cursor-pointer">5k-8k</label>
     
                                 <input type="radio" name="price-range" id="price-10k-15k" class="hidden">
-                                <label for="price-10k-15k" class=" p-2 mr-2 cursor-pointer">10k-15k</label>
+                                <label for="price-10k-15k" class="border-[#543fe0] border-[1px] rounded-full p-2 mr-2 cursor-pointer">10k-15k</label>
     
                                 <input type="radio" name="price-range" id="price-15k-plus" class="hidden">
-                                <label for="price-15k-plus" class=" p-2 mr-2 cursor-pointer">>15k</label>
+                                <label for="price-15k-plus" class="border-[#543fe0] border-[1px] rounded-full p-2 mr-2 cursor-pointer">>15k</label>
                             </ul>
                         </div>
     
@@ -393,7 +393,7 @@
                 </a>
             </li>
             <li class="lg:translate-y-[-25px] sm:translate-y-[-18px] translate-y-[-12px]">
-                 <p> ©  2024 OptixStudio, All rights reserved</p>
+                 <p> © <span id="currentYear"></span> OptixStudio, All rights reserved</p>
             </li>
         </ul>
     </footer>

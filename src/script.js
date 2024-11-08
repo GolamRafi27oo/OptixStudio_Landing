@@ -216,3 +216,9 @@ hoverListItems.forEach((item) => {
     image.style.display = "none";
   });
 });
+
+// Get the current year
+const currentYear = new Date().getFullYear();
+
+// Set the current year to the element with the ID "currentYear"
+document.getElementById('currentYear').textContent = currentYear;
