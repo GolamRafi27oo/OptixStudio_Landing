@@ -15,13 +15,17 @@ html {
 ::-webkit-scrollbar-thumb {
   background: #18142e; /* Dark gray color */
   border-radius: 10px;
-  padding:1;
+  padding: 1;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #5944e3; /* Darker gray when hovered */
 }
-
+.customShadow {
+  -webkit-box-shadow: 0px -9px 23px -3px rgba(6, 2, 31, 1);
+  -moz-box-shadow: 0px -9px 23px -3px rgba(6, 2, 31, 1);
+  box-shadow: 0px -9px 23px -3px rgba(6, 2, 31, 1);
+}
 button:hover {
   transition: color 0.3s;
 }
@@ -121,4 +125,54 @@ input[type="radio"]:checked + label {
 .hover-li:hover {
   color: #ffffff;
   transition: color 0.3s;
+}
+
+.scroller {
+  max-width: 100%;
+}
+
+.scroller__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
 }

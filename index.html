@@ -4,21 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptixStudio</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/9191/9191990.png">
     <link href="./src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="./src/custom.css">
 </head>
 
 <body class="text-white bg-custom-blue w-full scroll-smooth focus:scroll-auto transition-transform duration-300">
+    <!--/////Head and Nav section//////-->
     <header>
         <nav id="navBg" class="fixed top-0 w-[100%] z-10">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <span class="self-center text-xl font-semibold whitespace-nowrap">Optix<samp
-                            class="text-blue-600">Studio.</samp></span>
+
+                <!--/////////////Change Brand logo/////////////////////////-->
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img class="whitespace-nowrap self-center" src="./src/image/OptixStudio..png" alt="">
                 </a>
                 <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                     <button type="button"
-                        class="flex text-white bg-gradient-to-b from-[#BBA5F4] to-[#5540E3] hover:bg-gradient-to-t rounded-full sm:text-[18px] text-[10px] sm:font-[500] font-[400] sm:p-4 px-2 py-1 items-center text-center">
+                        class="flex text-white bg-gradient-to-b from-[#BBA5F4] to-[#5540E3] hover:bg-gradient-to-t rounded-full sm:text-[18px] text-[10px] sm:font-[500] font-[400] sm:p-4 px-[24px] py-1 items-center text-center">
                         <a href="#contact">Contact us</a> <img src="./src/image/Frame.png" alt=""></button>
                     <button type="button" id="toggleBtn"
                         class="mt-2 inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 hover:text-gray-200 md:hidden focus:outline-none">
@@ -29,27 +33,28 @@
                                 d="M1 1h15M1 7h15M1 13h15" />
                         </svg>
                     </button>
-                </div> 
+                </div>
                 <div id="navbar"
-                    class= "navAnimation text-base items-center justify-between hidden w-full md:flex md:w-auto md:order-1 bg-nav-custom-blue md:rounded-full md:mt-0 p-4 px-16">
+                    class="text-base items-center justify-between hidden w-full md:flex md:w-auto md:order-1 md:bg-transparent bg-nav-custom-blue md:rounded-full md:mt-0 p-4 px-16">
                     <ul
                         class="flex flex-col md:p-0 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 text-gray-400">
                         <li>
-                            <a href="#section1" class="nav-link" block text-white hover:text-white">Home</a>
+                            <a href="#section1" class="nav-link block hover:text-white">Home</a>
                         </li>
                         <li>
-                            <a href="#section2" class="nav-link" block hover:text-white">About us</a>
+                            <a href="#section2" class="nav-link block hover:text-white">About us</a>
                         </li>
                         <li>
-                            <a href="#section3" class="nav-link" block hover:text-white">Portfolio</a>
+                            <a href="#section3" class="nav-link block hover:text-white">Portfolio</a>
                         </li>
                         <li>
-                            <a href="#section4" class="nav-link" block hover:text-white">Serivces</a>
+                            <a href="#section4" class="nav-link block hover:text-white">Serivces</a>
                         </li>
                     </ul>
                 </div>
         </nav>
     </header>
+    <!--/////section one//////-->
     <section id="section1" class="section">
         <section class="z-0">
             <div
@@ -65,9 +70,10 @@
                     src="./src/image/inp-cwv.png" alt="">
             </div>
         </section>
+
         <section>
-            <div id="scroll-container" class="overflow-x-auto whitespace-nowrap no-scrollbar">
-                <ul class="cusAnime flex space-x-6 2xl:text-7xl lg:text-4xl text-2xl font-thin">
+            <div class="scroller cusAnime" data-speed="fast">
+                <ul class="tag-list scroller__inner space-x-6 2xl:text-7xl lg:text-4xl text-2xl font-thin">
                     <li>
                         <div class="flex items-center">
                             <img class="h-20 p-4 mx-12" src="./src/image/star.png" alt="Star Icon">
@@ -95,12 +101,14 @@
                 </ul>
             </div>
         </section>
-    </section>
 
+    </section>
+    <!--/////section Two//////-->
     <section id="section2" class="section">
-        <section  class="lg:m-40 sm:m-20 m-10">
+        <section class="lg:m-40 sm:m-20 m-10">
             <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
                 <div class="cusAnime flex justify-center">
+                    <!--Change Image-->
                     <img src="./src/image/image 2484.png" alt="">
                 </div>
                 <div class="cusAnime text-2xl lg:text-left text-center font-thin flex items-center">
@@ -113,9 +121,9 @@
                 </div>
             </div>
         </section>
-    
+
         <section
-            class=" scroll-smooth bg-gradient-to-t from-[#BBA5F4] to-[#5540E3] lg:mx-[40px] sm:mx-[20px] mx-[5px] rounded-[32px]">
+            class=" scroll-smooth bg-gradient-to-t from-[#BBA5F4] to-[#5540E3] lg:mx-[40px] sm:mx-[20px] mx-[5px] md:rounded-[32px] rounded-[16px]">
             <div
                 class="grid 2xl:grid-cols-2 grid-cols-1 gap-4 justify-center items-center sm:pt-[140px] pt-[20px] lg:px-[214px] px-[50px] lg:text-[64px] text-[44px] font-thin">
                 <div class="italic cusAnime">Our<br>Expertise</div>
@@ -130,33 +138,38 @@
                 class="cusAnime mt-20 sm:pb-40 pb-[20px] lg:px-[205px] xl:px-[214px] px-[50px] xl:text-[88px] lg:text-[68px] md:text-[64px] sm:text-[44px] text-[18px] text-[#BAB9BF] font-light">
                 <ul>
                     <li class="hover-li li-1">
+                        <!--Change Image-->
                         <img class="hover-image" src="./src/image/box.png" alt="image-1">
                         Brand Identity
                     </li>
                     <li class="hover-li li-2">
+                        <!--Change Image-->
                         <img class="hover-image" src="./src/image/box.png" alt="image-2">
                         WEB DESIGN
                     </li>
                     <li class="hover-li li-3">
+                        <!--Change Image-->
                         <img class="hover-image" src="./src/image/box.png" alt="image-3">
                         Web Development
                     </li>
                     <li class="hover-li li-4">
+                        <!--Change Image-->
                         <img class="hover-image" src="./src/image/box.png" alt="image-4">
                         App Development
                     </li>
                     <li class="hover-li li-5">
+                        <!--Change Image-->
                         <img class="hover-image" src="./src/image/box.png" alt="image-5">
                         Digital Marketing
                     </li>
                 </ul>
-    
-            </div>
-        </section>  
-    </section>
 
+            </div>
+        </section>
+    </section>
+    <!--/////section Three//////-->
     <section id="section3" class="section ">
-        <section  class="xl:m-32  m-5 sm:m-20">
+        <section class="xl:m-32  m-5 sm:m-20">
             <div class="grid xl:grid-cols-2 grid-cols-1 gap-4">
                 <div>
                     <ul class="cusAnime sm:text-[64px] text-[34px] font-thin">
@@ -164,10 +177,11 @@
                         <li class="italic">Reality</li>
                     </ul>
                     <p class="cusAnime pt-5 pb-5 text-[#BAB9BF]">Every project is unique, but
-                        our process always centers around collaboration and precision. We work closely with you to ensure
+                        our process always centers around collaboration and precision. We work closely with you to
+                        ensure
                         your vision is brought to life, from concept to completion. Here’s how we do it:</p>
                     <button type="button"
-                        class="cusAnime flex text-white bg-gradient-to-b from-[#BBA5F4] to-[#5540E3] hover:bg-gradient-to-t rounded-full md:text-[18px] text-[12px] font-[500] p-4 items-center text-center">
+                        class="cusAnime flex text-white bg-gradient-to-b from-[#BBA5F4] to-[#5540E3] hover:bg-gradient-to-t rounded-full md:text-[18px] text-[12px] font-[500] p-4 px-[32px] items-center text-center">
                         <a href="#">Services</a> <img src="./src/image/Frame.png" alt="">
                     </button>
                 </div>
@@ -178,7 +192,8 @@
                             <li>Discovery</li>
                         </ul>
                         <p class="cusAnime pl-14 text-[16px] text-[#BAB9BF]">We start by getting to know your business,
-                            goals, and audience. This insight helps us tailor our approach and craft a solution that aligns
+                            goals, and audience. This insight helps us tailor our approach and craft a solution that
+                            aligns
                             with your vision.</p>
                     </div>
                     <div class="border-2 border-[#383549] p-[32px] rounded-[10px] mb-5">
@@ -186,7 +201,8 @@
                             <li class="pr-5">02.</li>
                             <li>Design</li>
                         </ul>
-                        <p class="cusAnime pl-14 text-[16px] text-[#BAB9BF]">Our design phase is driven by creativity and
+                        <p class="cusAnime pl-14 text-[16px] text-[#BAB9BF]">Our design phase is driven by creativity
+                            and
                             user experience. We create intuitive, visually stunning designs that reflect your brand and
                             engage your audience.</p>
                     </div>
@@ -204,15 +220,16 @@
                             <li class="pr-5">04.</li>
                             <li>Launch & Beyond</li>
                         </ul>
-                        <p class="cusAnime pl-14 text-[16px] text-[#BAB9BF]">After thorough testing, we launch your project
+                        <p class="cusAnime pl-14 text-[16px] text-[#BAB9BF]">After thorough testing, we launch your
+                            project
                             and continue to provide support, ensuring your digital product evolves with your needs.</p>
                     </div>
                 </div>
             </div>
         </section>
         <section>
-            <div id="scroll-containerTwo" class="overflow-x-auto whitespace-nowrap no-scrollbar">
-                <ul class="cusAnime flex space-x-6 2xl:text-7xl lg:text-4xl text-2xl font-thin">
+            <div class="scroller cusAnime" data-speed="fast">
+                <ul class="tag-list scroller__inner space-x-6 2xl:text-7xl lg:text-4xl text-2xl font-thin">
                     <li>
                         <div class="flex items-center">
                             <img class="h-20 p-4 mx-12" src="./src/image/star.png" alt="Star Icon">
@@ -241,47 +258,155 @@
             </div>
         </section>
     </section>
-
-    <SECtion id="section4" class="section">
-        <section  class="mt-10 bg-[#191934] lg:mx-[40px] sm:mx-[20px] mx-[5px] rounded-[32px]">
-            <div
-                class="grid lg:grid-cols-2 grid-cols-1 gap-4 justify-center items-center pt-[10px] lg:pl-[114px] pl=0 lg:p-0 p-10 lg:text-[64px] text-[44px] font-thin">
-                <div class="cusAnime">
-                    <div class="flex font-[500] text-[#D3CCFF] lg:mt-0 mt-10 sm:text-[16px] text-[12px]">
-                        <div class="flex bg-[#636AB636] px-4 py-2 mr-2 rounded-full">
-                            <h1 class="bg-[#44B7FF] h-[10px] w-[10px] mr-2 sm:mt-2 mt-[5px] rounded-full"></h1>
-                            <h1>Web Development</h1>
+    <!--/////section Four//////-->
+    <section id="section4" class="section">
+        <section>
+            <section
+                class="sticky top-[15%] -z-40 mt-10 bg-[#191934] lg:mx-[40px] sm:mx-[20px] mx-[5px] md:rounded-[32px] rounded-[16px]">
+                <div
+                    class="grid lg:grid-cols-2 grid-cols-1 gap-4 justify-center items-center pt-[10px] lg:pl-[114px] pl=0 lg:p-0 p-10 lg:text-[64px] text-[44px] font-thin">
+                    <div class="cusAnime">
+                        <div class="flex font-[500] text-[#D3CCFF] lg:mt-0 mt-10 sm:text-[16px] text-[12px]">
+                            <div class="flex bg-[#636AB636] px-4 py-2 mr-2 rounded-full">
+                                <h1 class="bg-[#44B7FF] h-[10px] w-[10px] mr-2 sm:mt-2 mt-[5px] rounded-full"></h1>
+                                <h1>Web Development</h1>
+                            </div>
+                            <div class="bg-[#636AB636] px-4 flex items-center rounded-full">
+                                <h1>2024</h1>
+                            </div>
                         </div>
-                        <div class="bg-[#636AB636] px-4 flex items-center rounded-full">
-                            <h1>2024</h1>
+                        <div class="sm:text-[48px] text-[34px] block font-[400]">
+                            <h1>Connect.</h1>
+                            <h1 class="italic">CRM Project</h1>
+                            <p class="text-[16px] text-[#BAB9BF] mb-4">Every project is unique, but our process always
+                                centers
+                                around collaboration and precision. We work closely with you to ensure your vision is
+                                brought to
+                                life, from concept to completion. Here’s how we do it:</p>
+                            <button type="button"
+                                class="flex text-white bg-gradient-to-b from-[#BBA5F4] to-[#5540E3] hover:bg-gradient-to-t rounded-full md:text-[18px] text-[12px] font-[500] p-4 px-[32px] items-center text-center">
+                                <a href="#contact">Contact us</a> <img src="./src/image/Frame.png" alt="">
+                            </button>
                         </div>
                     </div>
-                    <div class="sm:text-[48px] text-[34px] block font-[400]">
-                        <h1>Connect.</h1>
-                        <h1 class="italic">CRM Project</h1>
-                        <p class="text-[16px] text-[#BAB9BF] mb-4">Every project is unique, but our process always centers
-                            around collaboration and precision. We work closely with you to ensure your vision is brought to
-                            life, from concept to completion. Here’s how we do it:</p>
-                        <button type="button"
-                            class="flex text-white bg-gradient-to-b from-[#BBA5F4] to-[#5540E3] hover:bg-gradient-to-t rounded-full md:text-[18px] text-[12px] font-[500] p-4 items-center text-center">
-                            <a href="#contact">Contact us</a> <img src="./src/image/Frame.png" alt="">
-                        </button>
+                    <div class="cusAnime flex lg:justify-end justify-center sm:p-4 p2 mr-1">
+                        <!--Change Image-->
+                        <img class="md:rounded-[16px] rounded-[8px]" src="./src/image/Frame 34400.png" alt="">
                     </div>
                 </div>
-                <div class="cusAnime flex lg:justify-end justify-center sm:p-4 p2 mr-1">
-                    <img src="./src/image/Frame 34400.png" alt="">
+            </section>
+            <section
+                class="sticky top-[18%] -z-30 mt-10 customShadow bg-[#191934] lg:mx-[40px] sm:mx-[20px] mx-[5px] md:rounded-[32px] rounded-[16px]">
+                <div
+                    class="grid lg:grid-cols-2 grid-cols-1 gap-4 justify-center items-center pt-[10px] lg:pl-[114px] pl=0 lg:p-0 p-10 lg:text-[64px] text-[44px] font-thin">
+                    <div class="cusAnime">
+                        <div class="flex font-[500] text-[#D3CCFF] lg:mt-0 mt-10 sm:text-[16px] text-[12px]">
+                            <div class="flex bg-[#636AB636] px-4 py-2 mr-2 rounded-full">
+                                <h1 class="bg-[#44B7FF] h-[10px] w-[10px] mr-2 sm:mt-2 mt-[5px] rounded-full"></h1>
+                                <h1>Web Development</h1>
+                            </div>
+                            <div class="bg-[#636AB636] px-4 flex items-center rounded-full">
+                                <h1>2024</h1>
+                            </div>
+                        </div>
+                        <div class="sm:text-[48px] text-[34px] block font-[400]">
+                            <h1>Connect.</h1>
+                            <h1 class="italic">CRM Project</h1>
+                            <p class="text-[16px] text-[#BAB9BF] mb-4">Every project is unique, but our process always
+                                centers
+                                around collaboration and precision. We work closely with you to ensure your vision is
+                                brought to
+                                life, from concept to completion. Here’s how we do it:</p>
+                            <button type="button"
+                                class="flex text-white bg-gradient-to-b from-[#BBA5F4] to-[#5540E3] hover:bg-gradient-to-t rounded-full md:text-[18px] text-[12px] font-[500] p-4 px-[32px] items-center text-center">
+                                <a href="#contact">Contact us</a> <img src="./src/image/Frame.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cusAnime flex lg:justify-end justify-center sm:p-4 p2 mr-1">
+                        <!--Change Image-->
+                        <img class="md:rounded-[16px] rounded-[8px]" src="./src/image/Frame 34400.png" alt="">
+                    </div>
                 </div>
-    
-            </div>
+            </section>
+            <section
+                class="sticky top-[21%] -z-20 mt-10 customShadow bg-[#191934] lg:mx-[40px] sm:mx-[20px] mx-[5px] md:rounded-[32px] rounded-[16px]">
+                <div
+                    class="grid lg:grid-cols-2 grid-cols-1 gap-4 justify-center items-center pt-[10px] lg:pl-[114px] pl=0 lg:p-0 p-10 lg:text-[64px] text-[44px] font-thin">
+                    <div class="cusAnime">
+                        <div class="flex font-[500] text-[#D3CCFF] lg:mt-0 mt-10 sm:text-[16px] text-[12px]">
+                            <div class="flex bg-[#636AB636] px-4 py-2 mr-2 rounded-full">
+                                <h1 class="bg-[#44B7FF] h-[10px] w-[10px] mr-2 sm:mt-2 mt-[5px] rounded-full"></h1>
+                                <h1>Web Development</h1>
+                            </div>
+                            <div class="bg-[#636AB636] px-4 flex items-center rounded-full">
+                                <h1>2024</h1>
+                            </div>
+                        </div>
+                        <div class="sm:text-[48px] text-[34px] block font-[400]">
+                            <h1>Connect.</h1>
+                            <h1 class="italic">CRM Project</h1>
+                            <p class="text-[16px] text-[#BAB9BF] mb-4">Every project is unique, but our process always
+                                centers
+                                around collaboration and precision. We work closely with you to ensure your vision is
+                                brought to
+                                life, from concept to completion. Here’s how we do it:</p>
+                            <button type="button"
+                                class="flex text-white bg-gradient-to-b from-[#BBA5F4] to-[#5540E3] hover:bg-gradient-to-t rounded-full md:text-[18px] text-[12px] font-[500] p-4 px-[32px] items-center text-center">
+                                <a href="#contact">Contact us</a> <img src="./src/image/Frame.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cusAnime flex lg:justify-end justify-center sm:p-4 p2 mr-1">
+                        <!--Change Image-->
+                        <img class="md:rounded-[16px] rounded-[8px]" src="./src/image/Frame 34400.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section
+                class="sticky top-[23%] -z-20 mt-10 customShadow bg-[#191934] lg:mx-[40px] sm:mx-[20px] mx-[5px] md:rounded-[32px] rounded-[16px]">
+                <div
+                    class="grid lg:grid-cols-2 grid-cols-1 gap-4 justify-center items-center pt-[10px] lg:pl-[114px] pl=0 lg:p-0 p-10 lg:text-[64px] text-[44px] font-thin">
+                    <div class="cusAnime">
+                        <div class="flex font-[500] text-[#D3CCFF] lg:mt-0 mt-10 sm:text-[16px] text-[12px]">
+                            <div class="flex bg-[#636AB636] px-4 py-2 mr-2 rounded-full">
+                                <h1 class="bg-[#44B7FF] h-[10px] w-[10px] mr-2 sm:mt-2 mt-[5px] rounded-full"></h1>
+                                <h1>Web Development</h1>
+                            </div>
+                            <div class="bg-[#636AB636] px-4 flex items-center rounded-full">
+                                <h1>2024</h1>
+                            </div>
+                        </div>
+                        <div class="sm:text-[48px] text-[34px] block font-[400]">
+                            <h1>Connect.</h1>
+                            <h1 class="italic">CRM Project</h1>
+                            <p class="text-[16px] text-[#BAB9BF] mb-4">Every project is unique, but our process always
+                                centers
+                                around collaboration and precision. We work closely with you to ensure your vision is
+                                brought to
+                                life, from concept to completion. Here’s how we do it:</p>
+                            <button type="button"
+                                class="flex text-white bg-gradient-to-b from-[#BBA5F4] to-[#5540E3] hover:bg-gradient-to-t rounded-full md:text-[18px] text-[12px] font-[500] p-4 px-[32px] items-center text-center">
+                                <a href="#contact">Contact us</a> <img src="./src/image/Frame.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cusAnime flex lg:justify-end justify-center sm:p-4 p2 mr-1">
+                        <!--Change Image-->
+                        <img class="md:rounded-[16px] rounded-[8px]" src="./src/image/Frame 34400.png" alt="">
+                    </div>
+                </div>
+            </section>
         </section>
         <section id="contact"
-            class="md:pt-10 pt-0 mt-10 bg-gradient-to-b from-[#5540E3] to-[#06021E] lg:mx-[40px] sm:mx-[20px] mx-[5px] rounded-[32px]">
+            class="md:pt-10 pt-0 mt-10 bg-gradient-to-b from-[#5540E3] to-[#06021E] lg:mx-[40px] sm:mx-[20px] mx-[5px] md:rounded-[32px] rounded-[16px]">
             <div
-                class="grid lg:grid-cols-2 grid-cols-1 gap-4 justify-center items-center pt-[10px] lg:px-[114px] pl=0 lg:p-0 p-10 lg:text-[64px] text-[44px] font-thin">
-                <div class="pt-10 lg:block flex  justify-center items-center lg:text-start text-center">
+                class="grid lg:grid-cols-2 grid-cols-1 md:gap-4 gap-2 justify-center items-center pt-[10px] xl:px-[114px] px-[30px] lg:text-[64px] text-[44px]">
+                <div class="pt-10 lg:block flex justify-center items-center lg:text-start text-center">
                     <samp>
-                        <div class="cusAnime xl:text-[80px] md:text-[50px] text-[38px] block font-[400] lg:mb-56">
-                            <h1>Let's<br>Collaborate</h1>
+                        <div class="cusAnime xl:text-[80px] md:text-[50px] text-[38px] block lg:mb-56 font-[400]">
+                            <h1>Let's<br><span class="italic font-sans">Collaborate</span></h1>
+
                         </div>
                         <div class="cusAnime sm:text-lg text-xs text-gray-300 block border-gray-600 sm:mb-0 mb-10">
                             <h1>Contact us:</h1>
@@ -304,41 +429,39 @@
                                     class="block py-2.5 px-0 w-full text-white bg-transparent border-0 border-b-2 border-[#543fe0] appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer">
                             </div>
                         </div>
-    
-    
-                        <div class="mb-10">
-                            <h1 class="sm:text-[18px] text-[12px] mb-5">I’m Interested in ..</h1>
+                        <div class="mb-10 font-[400]">
+                            <h1 class="sm:text-[18px] text-[12px] mb-5 font-[500]">I’m Interested in ..</h1>
                             <ul class="2xl:text-[18px] md:text-[12px] text-[8px] mb-10">
                                 <ul class="cusAnime flex mb-5 select-none">
                                     <label
-                                        class="option p-2 mr-2 border-[#543fe0] border-[1px] rounded-full cursor-pointer">
+                                        class="option md:py-[16px] py-[12px] md:px-[20px] px-[16px] mr-2 border-[#543fe0] border-[1px] rounded-full cursor-pointer">
                                         <input type="checkbox" class="hidden">
                                         Web Development
                                     </label>
                                     <label
-                                        class="option p-2 mr-2 border-[#543fe0] border-[1px] rounded-full cursor-pointer">
+                                        class="option md:py-[16px] py-[12px] md:px-[20px] px-[16px]  mr-2 border-[#543fe0] border-[1px] rounded-full cursor-pointer">
                                         <input type="checkbox" class="hidden">
                                         App from scratch
                                     </label>
                                     <label
-                                        class="option p-2 mr-2 border-[#543fe0] border-[1px] rounded-full cursor-pointer">
+                                        class="option md:py-[16px] py-[12px] md:px-[20px] px-[16px]  mr-2 border-[#543fe0] border-[1px] rounded-full cursor-pointer">
                                         <input type="checkbox" class="hidden">
                                         UX/UI Design
                                     </label>
                                 </ul>
                                 <ul class="cusAnime flex">
                                     <label
-                                        class="option p-2 mr-2 border-[#543fe0] border-[1px] rounded-full cursor-pointer">
+                                        class="option md:py-[16px] py-[12px] md:px-[20px] px-[16px]  mr-2 border-[#543fe0] border-[1px] rounded-full cursor-pointer">
                                         <input type="checkbox" class="hidden">
                                         Site from scratch
                                     </label>
                                     <label
-                                        class="option p-2 mr-2 border-[#543fe0] border-[1px] rounded-full cursor-pointer">
+                                        class="option md:py-[16px] py-[12px] md:px-[20px] px-[16px]  mr-2 border-[#543fe0] border-[1px] rounded-full cursor-pointer">
                                         <input type="checkbox" class="hidden">
                                         App Development
                                     </label>
                                     <label
-                                        class="option p-2 mr-2 border-[#543fe0] border-[1px] rounded-full cursor-pointer">
+                                        class="option md:py-[16px] py-[12px] md:px-[20px] px-[16px] mr-2 border-[#543fe0] border-[1px] rounded-full cursor-pointer">
                                         <input type="checkbox" class="hidden">
                                         Branding
                                     </label>
@@ -347,23 +470,29 @@
                             <h1 class="cusAnime sm:text-[16px] text-[12px] font-[500] mb-5">Project budget (USD)</h1>
                             <ul class="cusAnime 2xl:text-[18px] md:text-[12px] text-[10px] flex select-none">
                                 <input type="radio" name="price-range" id="price-500" class="hidden">
-                                <label for="price-500" class="border-[#543fe0] border-[1px] rounded-full p-2 mr-2 cursor-pointer">≤ 500</label>
-    
+                                <label for="price-500"
+                                    class="border-[#543fe0] border-[1px] rounded-full sm:py-[16px] py-[8px] sm:px-[20px] px-[12px] mr-2 cursor-pointer transparent bg-white/">≤
+                                    500</label>
+
                                 <input type="radio" name="price-range" id="price-1k-2k" class="hidden">
-                                <label for="price-1k-2k" class="border-[#543fe0] border-[1px] rounded-full p-2 mr-2 cursor-pointer">1k-2k</label>
-    
+                                <label for="price-1k-2k"
+                                    class="border-[#543fe0] border-[1px] rounded-full sm:py-[16px] py-[8px] sm:px-[20px] px-[12px]  mr-2 cursor-pointer">1k-2k</label>
+
                                 <input type="radio" name="price-range" id="price-5k-8k" class="hidden">
-                                <label for="price-5k-8k" class="border-[#543fe0] border-[1px] rounded-full p-2 mr-2 cursor-pointer">5k-8k</label>
-    
+                                <label for="price-5k-8k"
+                                    class="border-[#543fe0] border-[1px] rounded-full sm:py-[16px] py-[8px] sm:px-[20px] px-[12px]  mr-2 cursor-pointer">5k-8k</label>
+
                                 <input type="radio" name="price-range" id="price-10k-15k" class="hidden">
-                                <label for="price-10k-15k" class="border-[#543fe0] border-[1px] rounded-full p-2 mr-2 cursor-pointer">10k-15k</label>
-    
+                                <label for="price-10k-15k"
+                                    class="border-[#543fe0] border-[1px] rounded-full sm:py-[16px] py-[8px] sm:px-[20px] px-[12px]  mr-2 cursor-pointer">10k-15k</label>
+
                                 <input type="radio" name="price-range" id="price-15k-plus" class="hidden">
-                                <label for="price-15k-plus" class="border-[#543fe0] border-[1px] rounded-full p-2 mr-2 cursor-pointer">>15k</label>
+                                <label for="price-15k-plus"
+                                    class="border-[#543fe0] border-[1px] rounded-full sm:py-[16px] py-[8px] sm:px-[20px] px-[12px] mr-2 cursor-pointer">>15k</label>
                             </ul>
                         </div>
-    
-    
+
+
                         <div class="sm:text-[16px] text-[12px] font-[500] mb-10">
                             <div class="cusAnime mr-5">
                                 <label for="project">Tell us more about your project</label>
@@ -373,7 +502,7 @@
                         </div>
                         <div class="mt-10">
                             <button type="submit"
-                                class="flex text-white bg-gradient-to-b from-[#BBA5F4] to-[#5540E3] hover:bg-gradient-to-t rounded-full md:text-[18px] text-[12px] font-[500] p-4 items-center text-center">Send
+                                class="flex text-white bg-gradient-to-b from-[#BBA5F4] to-[#5540E3] hover:bg-gradient-to-t rounded-full md:text-[18px] text-[12px] font-[500] p-4 px-[32px] items-center text-center">Send
                                 now<img src="./src/image/Frame.png" alt="">
                             </button>
                         </div>
@@ -381,23 +510,22 @@
                 </div>
             </div>
         </section>
-    </SECtion>
-
-
-    <footer class="mt-10 lg:mx-32 mx-2 lg:text-[18px] sm:text-[12px] text-[8px]">
-        <ul class="cusAnime flex lg:justify-between justify-center">
-            <li>
-                <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <span class="self-center font-semibold whitespace-nowrap">Optix<samp
-                            class="text-blue-600">Studio.</samp></span>
+    </section>
+    <!--/////Footer section//////-->
+    <footer class="mt-10 lg:mx-32 mx-2 sm:text-[14px] text-[8px] text-gray-300">
+        <ul class="cusAnime flex lg:justify-between justify-center text-center py-5">
+            <li class="flex justify-center items-center">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <!--Change Image-->
+                    <img class="whitespace-nowrap self-center sm:pt-5 pt-3 sm:w-28 w-16"
+                        src="./src/image/OptixStudio..png" alt="">
                 </a>
             </li>
-            <li class="lg:translate-y-[-25px] sm:translate-y-[-18px] translate-y-[-12px]">
+            <li>
                  <p> © <span id="currentYear"></span> OptixStudio, All rights reserved</p>
             </li>
         </ul>
     </footer>
     <script src="./src/script.js"></script>
 </body>
-
 </html>

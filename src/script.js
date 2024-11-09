@@ -2,13 +2,15 @@ const toggleBtn = document.querySelector("#toggleBtn");
 const navbar = document.querySelector("#navbar");
 let isVisible = false;
 
+
+//nav toggole start
+
 toggleBtn.addEventListener("click", (event) => {
-  // Prevent the click outside handler from being triggered when the button is clicked
   event.stopImmediatePropagation();
 
   // Toggle visibility
   isVisible = !isVisible;
-  navbar.classList.toggle("hidden", !isVisible); // Toggle the "hidden" class based on the state
+  navbar.classList.toggle("hidden", !isVisible);
   const navBg = document.querySelector("#navBg");
   if (isVisible) {
     navbar.classList.remove("rounded-full");
@@ -24,7 +26,6 @@ toggleBtn.addEventListener("click", (event) => {
 
 // Hide navbar when clicking outside
 document.addEventListener("click", (event) => {
-  // Check if the click was outside of the navbar and the toggle button
   if (!navbar.contains(event.target) && !toggleBtn.contains(event.target)) {
     // Hide the navbar and reset the styling
     if (isVisible) {  // Only hide if the navbar is visible
@@ -36,12 +37,13 @@ document.addEventListener("click", (event) => {
     }
   }
 });
+//nav toggole end
 
-// Function to handle smooth scroll when clicking on a nav link
+
+//nav link auto catching start
 document.querySelectorAll('.nav-link').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
       e.preventDefault(); // Prevent the default anchor click behavior
-
       // Scroll to the target section
       const targetId = this.getAttribute('href').substring(1); // Get section ID from href
       const targetSection = document.getElementById(targetId);
@@ -86,44 +88,35 @@ window.addEventListener('load', setActiveNavLink); // Activate link on page load
 
 // Run the function when the user scrolls
 window.addEventListener('scroll', setActiveNavLink); // Update active link while scrolling
+//nav link auto catching end
 
 
+const scrollers = document.querySelectorAll(".scroller");
 
-
-const scrollContainer = document.getElementById("scroll-container");
-const scrollContainerTwo = document.getElementById("scroll-containerTwo");
-
-function startAutoScroll() {
-  let scrollAmount = 0;
-  let scrollAmountTwo = 0;
-  const speed = 2; // Adjust this value to control the scroll speed
-  const speedTwo = 2;
-  function scrollStep() {
-    scrollContainer.scrollLeft += speed;
-    scrollContainerTwo.scrollLeft += speedTwo;
-    scrollAmount += speed;
-    scrollAmountTwo += speedTwo;
-
-    // Reset scroll position when reaching the end
-    if (
-      scrollAmount >=
-        scrollContainer.scrollWidth - scrollContainer.clientWidth &&
-      scrollAmount >=
-        scrollContainerTwo.scrollWidth - scrollContainerTwo.clientWidth
-    ) {
-      scrollContainer.scrollLeft = 0;
-      scrollContainerTwo.scrollLeft = 0;
-      scrollAmount = 0;
-      scrollAmountTwo = 0;
-    }
-    requestAnimationFrame(scrollStep);
-  }
-
-  requestAnimationFrame(scrollStep);
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
 }
 
-// Start auto-scrolling when the page loads
-window.addEventListener("load", startAutoScroll);
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true);
+
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}
 
 // Trigger the animation on window load
 window.addEventListener("load", () => {
